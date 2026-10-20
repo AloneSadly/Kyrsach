@@ -56,7 +56,6 @@
             this.txtStockQuantity = new System.Windows.Forms.TextBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -330,7 +329,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(455, 573);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.txtStockQuantity);
@@ -400,7 +398,6 @@
         private System.Windows.Forms.TextBox txtStockQuantity;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
     }
 }

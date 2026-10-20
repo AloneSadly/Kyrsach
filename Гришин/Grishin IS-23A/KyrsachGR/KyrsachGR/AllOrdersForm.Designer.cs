@@ -321,7 +321,28 @@ namespace KyrsachGR
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
+
+
+
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             this.Load += new System.EventHandler(this.AllOrdersForm_Load);
+
+
+
+
+
+
         }
 
         #endregion

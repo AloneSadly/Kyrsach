@@ -144,7 +144,19 @@ namespace KyrsachGR
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
+
+
             this.Load += new System.EventHandler(this.UsersForm_Load);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.cmbProduct.SelectedIndexChanged += new System.EventHandler(this.cmbProduct_SelectedIndexChanged);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+
+
+
+
+
+
         }
 
         #endregion

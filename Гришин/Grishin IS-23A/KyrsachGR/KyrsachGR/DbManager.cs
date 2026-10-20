@@ -386,5 +386,132 @@ namespace KyrsachGR
                 return 0;
             }
         }
+        public static DataTable GetCategories()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT categ_id, name FROM categories", conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // --- Добавление товара (AddOrderForm) ---
+        public static void AddProduct(string name, string desc, string article, string manufacturer, string country,
+            decimal width, decimal length, string pattern, string color, decimal price, int stock, int categoryId)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    string sql = @"INSERT INTO products (name, description, article, manufacturer, country, width, length, pattern, color, price, stock_quantity, category_id) 
+                           VALUES (@name, @desc, @art, @man, @country, @w, @l, @pat, @col, @price, @stock, @cat)";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@desc", desc);
+                    cmd.Parameters.AddWithValue("@art", article);
+                    cmd.Parameters.AddWithValue("@man", manufacturer);
+                    cmd.Parameters.AddWithValue("@country", country);
+                    cmd.Parameters.AddWithValue("@w", width);
+                    cmd.Parameters.AddWithValue("@l", length);
+                    cmd.Parameters.AddWithValue("@pat", pattern);
+                    cmd.Parameters.AddWithValue("@col", color);
+                    cmd.Parameters.AddWithValue("@price", price);
+                    cmd.Parameters.AddWithValue("@stock", stock);
+                    cmd.Parameters.AddWithValue("@cat", categoryId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex) { throw new Exception("Ошибка добавления товара: " + ex.Message); }
+        }
+
+        // --- Добавление пользователя (FormUsersAdd) ---
+        public static void AddUser(string login, string fullName, string email, string phone, string pass, string role)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    string sql = @"INSERT INTO users (login, full_name, email, phone, pass, role) 
+                           VALUES (@login, @fio, @email, @phone, @pass, @role)";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@login", login);
+                    cmd.Parameters.AddWithValue("@fio", fullName);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@pass", pass);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex) { throw new Exception("Ошибка добавления сотрудника: " + ex.Message); }
+        }
+
+        // --- Создание заказа (Order_create) ---
+        // Возвращает ID созданного чека
+        public static int CreateReceipt(DateTime date, decimal total, int sellerId, string custName, string custPhone, DataTable items)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    // Начинаем транзакцию (если один INSERT упадет, второй отменится)
+                    MySqlTransaction transaction = conn.BeginTransaction();
+                    try
+                    {
+                        // 1. Создаем чек
+                        string sqlReceipt = @"INSERT INTO receipts (sale_date, total_amount, seller_id, customer_name, customer_phone) 
+                                      VALUES (@date, @total, @seller, @name, @phone);
+                                      SELECT LAST_INSERT_ID();";
+                        MySqlCommand cmd1 = new MySqlCommand(sqlReceipt, conn, transaction);
+                        cmd1.Parameters.AddWithValue("@date", date);
+                        cmd1.Parameters.AddWithValue("@total", total);
+                        cmd1.Parameters.AddWithValue("@seller", sellerId);
+                        cmd1.Parameters.AddWithValue("@name", custName);
+                        cmd1.Parameters.AddWithValue("@phone", custPhone);
+                        int receiptId = Convert.ToInt32(cmd1.ExecuteScalar());
+
+                        // 2. Создаем позиции чека и списываем товар со склада
+                        foreach (DataRow row in items.Rows)
+                        {
+                            int prodId = Convert.ToInt32(row["id"]);
+                            int qty = Convert.ToInt32(row["quantity"]);
+                            decimal price = Convert.ToDecimal(row["price"]);
+
+                            // Вставка в receipt_items
+                            string sqlItem = "INSERT INTO receipt_items (receipt_id, product_id, quantity, price_per_unit) VALUES (@rid, @pid, @qty, @price)";
+                            MySqlCommand cmdItem = new MySqlCommand(sqlItem, conn, transaction);
+                            cmdItem.Parameters.AddWithValue("@rid", receiptId);
+                            cmdItem.Parameters.AddWithValue("@pid", prodId);
+                            cmdItem.Parameters.AddWithValue("@qty", qty);
+                            cmdItem.Parameters.AddWithValue("@price", price);
+                            cmdItem.ExecuteNonQuery();
+
+                            // Обновление остатка на складе
+                            string sqlStock = "UPDATE products SET stock_quantity = stock_quantity - @qty WHERE id = @pid";
+                            MySqlCommand cmdStock = new MySqlCommand(sqlStock, conn, transaction);
+                            cmdStock.Parameters.AddWithValue("@qty", qty);
+                            cmdStock.Parameters.AddWithValue("@pid", prodId);
+                            cmdStock.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        return receiptId;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+            catch (Exception ex) { throw new Exception("Ошибка создания заказа: " + ex.Message); }
+        }
     }
 }

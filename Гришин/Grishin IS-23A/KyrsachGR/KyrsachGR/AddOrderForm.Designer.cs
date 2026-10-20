@@ -383,6 +383,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.Load += new System.EventHandler(this.AddOrderForm_Load);
+
+
+
         }
 
         #endregion

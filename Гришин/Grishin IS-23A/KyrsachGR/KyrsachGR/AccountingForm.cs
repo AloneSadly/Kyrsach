@@ -161,10 +161,15 @@ namespace KyrsachGR
             this.Close();
         }
 
-        private void button13_Click(object sender, EventArgs e) 
+        private void button13_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Функционал добавления товара.\nСоздайте форму ProductEditForm и вызовите её отсюда.",
-                "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (AddOrderForm addForm = new AddOrderForm())
+            {
+                if (addForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadProducts();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e) 

@@ -465,6 +465,13 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            this.btnCreateReceipt.Click += new System.EventHandler(this.btnCreateReceipt_Click);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.Load += new System.EventHandler(this.Order_create_Load);
+
         }
 
         #endregion

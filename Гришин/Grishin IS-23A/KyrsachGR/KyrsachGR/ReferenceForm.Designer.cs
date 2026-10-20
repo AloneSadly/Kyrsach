@@ -519,7 +519,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
+
             this.Load += new System.EventHandler(this.ReferenceForm_Load);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click); // Добавить
+            this.button15.Click += new System.EventHandler(this.button15_Click); // Изменить
+            this.button1.Click += new System.EventHandler(this.button1_Click); // Отменить
+            this.txtCountryName.TextChanged += new System.EventHandler(this.txtCountryName_TextChanged); // Поиск
+            this.button4.Click += new System.EventHandler(this.button4_Click); // Добавить
+            this.button5.Click += new System.EventHandler(this.button5_Click); // Изменить
+            this.button3.Click += new System.EventHandler(this.button3_Click); // Отменить
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged); // Поиск
+            this.button7.Click += new System.EventHandler(this.button7_Click); // Добавить
+            this.button8.Click += new System.EventHandler(this.button8_Click); // Изменить
+            this.button6.Click += new System.EventHandler(this.button6_Click); // Отменить
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged); // Поиск
         }
 
         #endregion

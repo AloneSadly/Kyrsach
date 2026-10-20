@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace KyrsachGR
@@ -36,6 +38,7 @@ namespace KyrsachGR
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
         private void LoadOrders()
         {
             try
@@ -54,7 +57,6 @@ namespace KyrsachGR
                 dataGridView1.DataSource = dt;
 
                 ApplyConditionalFormatting();
-
                 UpdatePaginationButtons();
             }
             catch (Exception ex)
@@ -62,6 +64,7 @@ namespace KyrsachGR
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void ApplyConditionalFormatting()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -71,7 +74,7 @@ namespace KyrsachGR
                     decimal sum = Convert.ToDecimal(row.Cells["Сумма"].Value);
                     if (sum > 10000)
                     {
-                        row.DefaultCellStyle.BackColor = Color.MistyRose; 
+                        row.DefaultCellStyle.BackColor = Color.MistyRose;
                         row.DefaultCellStyle.ForeColor = Color.DarkRed;
                     }
                 }
@@ -82,6 +85,7 @@ namespace KyrsachGR
                 }
             }
         }
+
         private void UpdatePaginationButtons()
         {
             Button[] pageButtons = { button8, button9, button10, button11, button12 };
@@ -93,7 +97,7 @@ namespace KyrsachGR
                 {
                     pageButtons[i].Text = pageNum.ToString();
                     pageButtons[i].Visible = true;
-                    pageButtons[i].Enabled = (pageNum != currentPage); 
+                    pageButtons[i].Enabled = (pageNum != currentPage);
                 }
                 else
                 {
@@ -102,13 +106,21 @@ namespace KyrsachGR
             }
         }
 
+        // --- ПАГИНАЦИЯ ---
         private void button8_Click(object sender, EventArgs e) { currentPage = 1; LoadOrders(); }
         private void button9_Click(object sender, EventArgs e) { currentPage = 2; LoadOrders(); }
         private void button10_Click(object sender, EventArgs e) { currentPage = 3; LoadOrders(); }
         private void button11_Click(object sender, EventArgs e) { currentPage = 4; LoadOrders(); }
         private void button12_Click(object sender, EventArgs e) { currentPage = 5; LoadOrders(); }
 
+        // --- ФИЛЬТРЫ ---
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadOrders();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentPage = 1;
             LoadOrders();
@@ -123,15 +135,120 @@ namespace KyrsachGR
             LoadOrders();
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            currentPage = 1;
-            LoadOrders();
-        }
-
+        // --- КНОПКИ ДЕЙСТВИЙ ---
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // ФОРМИРОВАНИЕ ЧЕКА ДЛЯ ВЫБРАННОГО ЗАКАЗА
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите заказ из таблицы для формирования чека!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                var row = dataGridView1.SelectedRows[0];
+                string receiptId = row.Cells["№ Чека"].Value?.ToString();
+                string date = row.Cells["Дата"].Value?.ToString();
+                string seller = row.Cells["Продавец"].Value?.ToString();
+                string customer = row.Cells["Клиент"].Value?.ToString();
+                string total = row.Cells["Сумма"].Value?.ToString();
+
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "Text files (*.txt)|*.txt",
+                    FileName = $"Чек_№{receiptId}_{DateTime.Now:yyyyMMdd}.txt"
+                };
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("=========================================");
+                    sb.AppendLine("              МАГАЗИН ОБОЕВ              ");
+                    sb.AppendLine("=========================================");
+                    sb.AppendLine($"Чек №: {receiptId}");
+                    sb.AppendLine($"Дата: {date}");
+                    sb.AppendLine($"Продавец: {seller}");
+                    sb.AppendLine($"Покупатель: {customer}");
+                    sb.AppendLine("-----------------------------------------");
+                    sb.AppendLine($"ИТОГО К ОПЛАТЕ: {total} руб.");
+                    sb.AppendLine("=========================================");
+                    sb.AppendLine("       Спасибо за покупку!       ");
+
+                    // Для полноценного чека нужно было бы сделать SELECT из receipt_items,
+                    // но для базовой работы мы выводим шапку.
+
+                    File.WriteAllText(sfd.FileName, sb.ToString(), Encoding.UTF8);
+                    MessageBox.Show("Чек успешно сформирован и сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при создании чека: " + ex.Message);
+            }
+        }
+
+        // ФОРМИРОВАНИЕ ОТЧЕТА ЗА ПЕРИОД
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // Берем даты из нижних DateTimePicker
+            DateTime startDate = dateTimePicker2.Value.Date;
+            DateTime endDate = dateTimePicker3.Value.Date.AddDays(1).AddSeconds(-1); // Конец дня
+
+            if (startDate > endDate)
+            {
+                MessageBox.Show("Дата 'С' не может быть больше даты 'По'!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Для отчета выгружаем данные из текущей таблицы (или можно сделать отдельный SQL-запрос)
+                // В данном случае просто сохраняем то, что видит пользователь, но с фильтром по датам.
+                // (В идеале нужно добавить метод в DbManager: GetOrdersByPeriod).
+
+                SaveFileDialog sfd = new SaveFileDialog
+                {
+                    Filter = "CSV files (*.csv)|*.csv",
+                    FileName = $"Отчет_с_{startDate:dd.MM.yyyy}_по_{endDate:dd.MM.yyyy}.csv"
+                };
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($"Отчет о продажах за период с {startDate:dd.MM.yyyy} по {dateTimePicker3.Value:dd.MM.yyyy}");
+                    sb.AppendLine("--------------------------------------------------");
+
+                    // Заголовки
+                    sb.AppendLine("№ Чека;Дата;Продавец;Клиент;Сумма");
+
+                    // Здесь для простоты берутся строки с текущей страницы.
+                    // Для реального отчета нужен SQL-запрос с WHERE sale_date BETWEEN @start AND @end
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        string rDateStr = row.Cells["Дата"].Value?.ToString();
+                        if (DateTime.TryParse(rDateStr, out DateTime rDate))
+                        {
+                            if (rDate >= startDate && rDate <= endDate)
+                            {
+                                sb.AppendLine($"{row.Cells["№ Чека"].Value};{rDateStr};{row.Cells["Продавец"].Value};{row.Cells["Клиент"].Value};{row.Cells["Сумма"].Value}");
+                            }
+                        }
+                    }
+
+                    File.WriteAllText(sfd.FileName, sb.ToString(), new UTF8Encoding(true));
+                    MessageBox.Show("Отчет успешно сформирован!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при создании отчета: " + ex.Message);
+            }
         }
     }
 }

@@ -225,6 +225,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.Load += new System.EventHandler(this.FormUsersAdd_Load);
+
         }
 
         #endregion

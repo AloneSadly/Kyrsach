@@ -137,16 +137,13 @@ namespace KyrsachGR
         /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
-            // Открываем форму AuthForm? Нет, нужно что-то другое.
-            // Вариант 1: Открыть форму редактирования пользователя (если создадите UserEditForm).
-            // Вариант 2: Показать сообщение, что добавление через эту форму недоступно.
-
-            MessageBox.Show("Для добавления пользователя откройте форму редактирования (UserEditForm).",
-                "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Если у вас есть UserEditForm:
-            // var editForm = new UserEditForm(0); // 0 = новый пользователь
-            // if (editForm.ShowDialog() == DialogResult.OK) LoadUsers();
+            using (FormUsersAdd addForm = new FormUsersAdd())
+            {
+                if (addForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadUsers(); // Обновляем список пользователей
+                }
+            }
         }
 
         /// <summary>

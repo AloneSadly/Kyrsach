@@ -22,9 +22,19 @@ namespace KyrsachGR
         {
             SetupDataGridView();
 
+            // Заполняем фильтр статусов
             comboBox2.Items.Clear();
             comboBox2.Items.AddRange(new string[] { "Все", "Обычный", "Крупный" });
             comboBox2.SelectedIndex = 0;
+
+            // Заполняем сортировку (если она есть на форме)
+            if (comboBox1 != null)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.AddRange(new string[] { "По дате", "По сумме", "По клиенту" });
+                comboBox1.SelectedIndex = 0;
+                comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            }
 
             LoadOrders();
         }
@@ -45,6 +55,7 @@ namespace KyrsachGR
             {
                 string search = textBox2.Text.Trim();
                 string status = comboBox2.SelectedItem?.ToString() ?? "Все";
+                string sort = comboBox1 != null ? comboBox1.SelectedItem?.ToString() ?? "По дате" : "По дате";
 
                 int totalRecords = DbManager.GetOrdersCount(search, status);
                 totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
@@ -53,7 +64,7 @@ namespace KyrsachGR
                 if (currentPage > totalPages) currentPage = totalPages;
                 if (currentPage < 1) currentPage = 1;
 
-                DataTable dt = DbManager.GetOrders(currentPage, pageSize, search, status);
+                DataTable dt = DbManager.GetOrders(currentPage, pageSize, search, status, sort);
                 dataGridView1.DataSource = dt;
 
                 ApplyConditionalFormatting();
@@ -126,10 +137,17 @@ namespace KyrsachGR
             LoadOrders();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadOrders();
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             textBox2.Text = "";
             comboBox2.SelectedIndex = 0;
+            if (comboBox1 != null) comboBox1.SelectedIndex = 0;
             dateTimePicker1.Value = DateTime.Now;
             currentPage = 1;
             LoadOrders();
@@ -141,7 +159,7 @@ namespace KyrsachGR
             this.Close();
         }
 
-        // ФОРМИРОВАНИЕ ЧЕКА ДЛЯ ВЫБРАННОГО ЗАКАЗА
+        // ФОРМИРОВАНИЕ ЧЕКА (ПОДРОБНОЕ С ПОЗИЦИЯМИ)
         private void button14_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0)
@@ -153,11 +171,14 @@ namespace KyrsachGR
             try
             {
                 var row = dataGridView1.SelectedRows[0];
-                string receiptId = row.Cells["№ Чека"].Value?.ToString();
+                int receiptId = Convert.ToInt32(row.Cells["№ Чека"].Value);
                 string date = row.Cells["Дата"].Value?.ToString();
                 string seller = row.Cells["Продавец"].Value?.ToString();
                 string customer = row.Cells["Клиент"].Value?.ToString();
-                string total = row.Cells["Сумма"].Value?.ToString();
+                decimal total = Convert.ToDecimal(row.Cells["Сумма"].Value);
+
+                // Получаем список товаров в этом чеке
+                DataTable items = DbManager.GetOrderItems(receiptId);
 
                 SaveFileDialog sfd = new SaveFileDialog
                 {
@@ -176,12 +197,18 @@ namespace KyrsachGR
                     sb.AppendLine($"Продавец: {seller}");
                     sb.AppendLine($"Покупатель: {customer}");
                     sb.AppendLine("-----------------------------------------");
+                    sb.AppendLine("Товар\t\tКол-во\tЦена\tСумма");
+                    sb.AppendLine("-----------------------------------------");
+
+                    foreach (DataRow item in items.Rows)
+                    {
+                        sb.AppendLine($"{item["Товар"]}\t{item["Кол-во"]}\t{item["Цена"]}\t{item["Сумма"]}");
+                    }
+
+                    sb.AppendLine("-----------------------------------------");
                     sb.AppendLine($"ИТОГО К ОПЛАТЕ: {total} руб.");
                     sb.AppendLine("=========================================");
                     sb.AppendLine("       Спасибо за покупку!       ");
-
-                    // Для полноценного чека нужно было бы сделать SELECT из receipt_items,
-                    // но для базовой работы мы выводим шапку.
 
                     File.WriteAllText(sfd.FileName, sb.ToString(), Encoding.UTF8);
                     MessageBox.Show("Чек успешно сформирован и сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -193,10 +220,9 @@ namespace KyrsachGR
             }
         }
 
-        // ФОРМИРОВАНИЕ ОТЧЕТА ЗА ПЕРИОД
+        // ФОРМИРОВАНИЕ ОТЧЕТА ЗА ПЕРИОД (РЕАЛЬНЫЙ SQL-ЗАПРОС)
         private void button15_Click(object sender, EventArgs e)
         {
-            // Берем даты из нижних DateTimePicker
             DateTime startDate = dateTimePicker2.Value.Date;
             DateTime endDate = dateTimePicker3.Value.Date.AddDays(1).AddSeconds(-1); // Конец дня
 
@@ -208,9 +234,14 @@ namespace KyrsachGR
 
             try
             {
-                // Для отчета выгружаем данные из текущей таблицы (или можно сделать отдельный SQL-запрос)
-                // В данном случае просто сохраняем то, что видит пользователь, но с фильтром по датам.
-                // (В идеале нужно добавить метод в DbManager: GetOrdersByPeriod).
+                // Получаем данные за период из БД
+                DataTable reportData = DbManager.GetOrdersForReport(startDate, endDate);
+
+                if (reportData.Rows.Count == 0)
+                {
+                    MessageBox.Show("За выбранный период заказов не найдено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
                 SaveFileDialog sfd = new SaveFileDialog
                 {
@@ -227,22 +258,14 @@ namespace KyrsachGR
                     // Заголовки
                     sb.AppendLine("№ Чека;Дата;Продавец;Клиент;Сумма");
 
-                    // Здесь для простоты берутся строки с текущей страницы.
-                    // Для реального отчета нужен SQL-запрос с WHERE sale_date BETWEEN @start AND @end
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    // Данные
+                    foreach (DataRow row in reportData.Rows)
                     {
-                        string rDateStr = row.Cells["Дата"].Value?.ToString();
-                        if (DateTime.TryParse(rDateStr, out DateTime rDate))
-                        {
-                            if (rDate >= startDate && rDate <= endDate)
-                            {
-                                sb.AppendLine($"{row.Cells["№ Чека"].Value};{rDateStr};{row.Cells["Продавец"].Value};{row.Cells["Клиент"].Value};{row.Cells["Сумма"].Value}");
-                            }
-                        }
+                        sb.AppendLine($"{row["№ Чека"]};{row["Дата"]};{row["Продавец"]};{row["Клиент"]};{row["Сумма"]}");
                     }
 
-                    File.WriteAllText(sfd.FileName, sb.ToString(), new UTF8Encoding(true));
-                    MessageBox.Show("Отчет успешно сформирован!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    File.WriteAllText(sfd.FileName, sb.ToString(), new UTF8Encoding(true)); // UTF8 с BOM для Excel
+                    MessageBox.Show($"Отчет успешно сформирован! Найдено {reportData.Rows.Count} заказов.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

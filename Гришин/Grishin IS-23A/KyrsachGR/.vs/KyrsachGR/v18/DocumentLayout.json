@@ -3,12 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\welcomeadmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\welcomeadmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\welcomemerchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\welcomemerchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\welcomeuserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\welcomeuserform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\welcomeadmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\welcomeadmform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\scripts\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\scripts\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\order_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\accountingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\accountingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\accountingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\accountingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\addorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\addorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\allordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\allordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\referenceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\referenceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\referenceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\referenceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\formproductsedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\formproductsedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\formproductsedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\formproductsedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\formusersedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\formusersedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\formusersedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\formusersedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\usersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\usersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\usersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\usersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|c:\\users\\eg\\desktop\\\u0433\u0440\u0438\u0448\u0438\u043D\\\u0433\u0440\u0438\u0448\u0438\u043D\\grishin is-23a\\kyrsachgr\\kyrsachgr\\forms\\formusersedit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3096A567-E27C-4285-829A-820302C55BBF}|KyrsachGR\\KyrsachGR.csproj|solutionrelative:kyrsachgr\\forms\\formusersedit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +102,266 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Order_create.cs",
-              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Order_create.cs",
-              "RelativeDocumentMoniker": "KyrsachGR\\Order_create.cs",
-              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Order_create.cs",
-              "RelativeToolTip": "KyrsachGR\\Order_create.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAewGoAAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Program.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Program.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Program.cs",
+              "RelativeToolTip": "KyrsachGR\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T07:20:10.626Z",
+              "WhenOpened": "2026-10-26T21:17:34.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WelcomeUserForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeUserForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\WelcomeUserForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeUserForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\WelcomeUserForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:17:19.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Order_create.cs",
-              "RelativeDocumentMoniker": "KyrsachGR\\Order_create.cs",
-              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "KyrsachGR\\Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "WelcomeMerchForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeMerchForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\WelcomeMerchForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeMerchForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\WelcomeMerchForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T07:20:09.487Z",
+              "WhenOpened": "2026-10-26T21:17:16.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WelcomeAdmForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:17:11.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WelcomeAdmForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\WelcomeAdmForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\WelcomeAdmForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\WelcomeAdmForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:17:10.377Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Order_create.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\Order_create.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\Order_create.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\Order_create.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\Order_create.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAYwNkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:14:16.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\Order_create.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\Order_create.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\Order_create.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:14:15.384Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AllOrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AllOrdersForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\AllOrdersForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AllOrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\AllOrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:05:27.104Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReferenceForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\ReferenceForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\ReferenceForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\ReferenceForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\ReferenceForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:03:05.403Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountingForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AccountingForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\AccountingForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AccountingForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\AccountingForm.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAswEIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:01:51.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AccountingForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\AccountingForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AccountingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\AccountingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:01:47.665Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbManager.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Scripts\\DbManager.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Scripts\\DbManager.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Scripts\\DbManager.cs",
+              "RelativeToolTip": "KyrsachGR\\Scripts\\DbManager.cs",
+              "ViewState": "AgIAAKcCAAAAAAAAAAAwwM4CAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:56:51.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AddOrderForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\AddOrderForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\AddOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\AddOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:08:55.859Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormProductsEdit.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAswJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:01:14.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReferenceForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\ReferenceForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\ReferenceForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\ReferenceForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\ReferenceForm.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAAAywGMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:03:06.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormProductsEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\FormProductsEdit.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormProductsEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\FormProductsEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T21:01:13.215Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormUsersEdit.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:58:22.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormUsersEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\FormUsersEdit.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\FormUsersEdit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:58:21.468Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersForm.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\UsersForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\UsersForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\UsersForm.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\UsersForm.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAmwNEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:57:16.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormUsersEdit.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.Designer.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\FormUsersEdit.Designer.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\FormUsersEdit.Designer.cs",
+              "RelativeToolTip": "KyrsachGR\\Forms\\FormUsersEdit.Designer.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAcwMYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:58:28.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UsersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\UsersForm.cs",
+              "RelativeDocumentMoniker": "KyrsachGR\\Forms\\UsersForm.cs",
+              "ToolTip": "C:\\Users\\EG\\Desktop\\\u0413\u0440\u0438\u0448\u0438\u043D\\\u0413\u0440\u0438\u0448\u0438\u043D\\Grishin IS-23A\\KyrsachGR\\KyrsachGR\\Forms\\UsersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KyrsachGR\\Forms\\UsersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T20:57:14.063Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]

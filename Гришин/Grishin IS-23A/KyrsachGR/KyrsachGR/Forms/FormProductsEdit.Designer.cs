@@ -39,17 +39,17 @@
             this.lblManufacturer = new System.Windows.Forms.Label();
             this.txtManufacturer = new System.Windows.Forms.TextBox();
             this.lblCountry = new System.Windows.Forms.Label();
-            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtCountry = new System.Windows.Forms.ComboBox();
             this.lblWidth = new System.Windows.Forms.Label();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.lblLength = new System.Windows.Forms.Label();
             this.txtLength = new System.Windows.Forms.TextBox();
             this.lblMaterial = new System.Windows.Forms.Label();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.txtMaterial = new System.Windows.Forms.ComboBox();
             this.lblPattern = new System.Windows.Forms.Label();
-            this.txtPattern = new System.Windows.Forms.TextBox();
+            this.txtPattern = new System.Windows.Forms.ComboBox();
             this.lblColor = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtColor = new System.Windows.Forms.ComboBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.lblStockQuantity = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.lblCategory = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -159,7 +161,7 @@
             this.txtCountry.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.txtCountry.Location = new System.Drawing.Point(193, 213);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(241, 23);
+            this.txtCountry.Size = new System.Drawing.Size(241, 24);
             this.txtCountry.TabIndex = 10;
             // 
             // lblWidth
@@ -213,7 +215,7 @@
             this.txtMaterial.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.txtMaterial.Location = new System.Drawing.Point(193, 317);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(241, 23);
+            this.txtMaterial.Size = new System.Drawing.Size(241, 24);
             this.txtMaterial.TabIndex = 16;
             // 
             // lblPattern
@@ -231,7 +233,7 @@
             this.txtPattern.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.txtPattern.Location = new System.Drawing.Point(193, 352);
             this.txtPattern.Name = "txtPattern";
-            this.txtPattern.Size = new System.Drawing.Size(241, 23);
+            this.txtPattern.Size = new System.Drawing.Size(241, 24);
             this.txtPattern.TabIndex = 18;
             // 
             // lblColor
@@ -249,7 +251,7 @@
             this.txtColor.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.txtColor.Location = new System.Drawing.Point(193, 386);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(241, 23);
+            this.txtColor.Size = new System.Drawing.Size(241, 24);
             this.txtColor.TabIndex = 20;
             // 
             // lblPrice
@@ -322,12 +324,43 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(193, 528);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(103, 30);
+            this.btnSave.TabIndex = 27;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(221, 528);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Изменить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FormProductsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(455, 573);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblCategory);
@@ -370,7 +403,7 @@
 
         #endregion
 
-        
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
@@ -381,17 +414,17 @@
         private System.Windows.Forms.Label lblManufacturer;
         private System.Windows.Forms.TextBox txtManufacturer;
         private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.ComboBox txtCountry;
         private System.Windows.Forms.Label lblWidth;
         private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.Label lblLength;
         private System.Windows.Forms.TextBox txtLength;
         private System.Windows.Forms.Label lblMaterial;
-        private System.Windows.Forms.TextBox txtMaterial;
+        private System.Windows.Forms.ComboBox txtMaterial;
         private System.Windows.Forms.Label lblPattern;
-        private System.Windows.Forms.TextBox txtPattern;
+        private System.Windows.Forms.ComboBox txtPattern;
         private System.Windows.Forms.Label lblColor;
-        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.ComboBox txtColor;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblStockQuantity;
@@ -399,5 +432,6 @@
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -43,6 +43,7 @@ namespace KyrsachGR
             this.lblCaptcha = new System.Windows.Forms.Label();
             this.timerBlock = new System.Windows.Forms.Timer(this.components);
             this.btnRefreshCaptcha = new System.Windows.Forms.Button();
+            this.btnTogglePass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +148,7 @@ namespace KyrsachGR
             // timerBlock
             // 
             this.timerBlock.Interval = 10000;
+            this.timerBlock.Tick += new System.EventHandler(this.timerBlock_Tick);
             // 
             // btnRefreshCaptcha
             // 
@@ -159,12 +161,24 @@ namespace KyrsachGR
             this.btnRefreshCaptcha.Visible = false;
             this.btnRefreshCaptcha.Click += new System.EventHandler(this.btnRefreshCaptcha_Click);
             // 
+            // btnTogglePass
+            // 
+            this.btnTogglePass.Location = new System.Drawing.Point(238, 171);
+            this.btnTogglePass.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTogglePass.Name = "btnTogglePass";
+            this.btnTogglePass.Size = new System.Drawing.Size(24, 23);
+            this.btnTogglePass.TabIndex = 7;
+            this.btnTogglePass.Text = "🙈";
+            this.btnTogglePass.UseVisualStyleBackColor = true;
+            this.btnTogglePass.Click += new System.EventHandler(this.btnTogglePass_Click);
+            // 
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(529, 336);
+            this.Controls.Add(this.btnTogglePass);
             this.Controls.Add(this.btnRefreshCaptcha);
             this.Controls.Add(this.lblCaptcha);
             this.Controls.Add(this.txtCaptcha);
@@ -185,13 +199,12 @@ namespace KyrsachGR
             this.Name = "AuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.AuthForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaptcha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            this.timerBlock.Tick += new System.EventHandler(this.timerBlock_Tick);
-            this.Load += new System.EventHandler(this.AuthForm_Load);
         }
 
         #endregion
@@ -207,6 +220,7 @@ namespace KyrsachGR
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnTogglePass;
     }
 }
 

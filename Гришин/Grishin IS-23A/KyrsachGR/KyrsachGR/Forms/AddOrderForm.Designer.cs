@@ -39,17 +39,17 @@
             this.lblManufacturer = new System.Windows.Forms.Label();
             this.txtManufacturer = new System.Windows.Forms.TextBox();
             this.lblCountry = new System.Windows.Forms.Label();
-            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.lblWidth = new System.Windows.Forms.Label();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.lblLength = new System.Windows.Forms.Label();
             this.txtLength = new System.Windows.Forms.TextBox();
             this.lblMaterial = new System.Windows.Forms.Label();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.cmbMaterial = new System.Windows.Forms.ComboBox();
             this.lblPattern = new System.Windows.Forms.Label();
-            this.txtPattern = new System.Windows.Forms.TextBox();
+            this.cmbPattern = new System.Windows.Forms.ComboBox();
             this.lblColor = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.lblStockQuantity = new System.Windows.Forms.Label();
@@ -157,11 +157,11 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.txtCountry.Location = new System.Drawing.Point(186, 216);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(241, 23);
-            this.txtCountry.TabIndex = 10;
+            this.cmbCountry.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.cmbCountry.Location = new System.Drawing.Point(186, 216);
+            this.cmbCountry.Name = "cmbCountry";
+            this.cmbCountry.Size = new System.Drawing.Size(241, 23);
+            this.cmbCountry.TabIndex = 10;
             // 
             // lblWidth
             // 
@@ -211,11 +211,11 @@
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.txtMaterial.Location = new System.Drawing.Point(186, 320);
-            this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(241, 23);
-            this.txtMaterial.TabIndex = 16;
+            this.cmbMaterial.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.cmbMaterial.Location = new System.Drawing.Point(186, 320);
+            this.cmbMaterial.Name = "cmbMaterial";
+            this.cmbMaterial.Size = new System.Drawing.Size(241, 23);
+            this.cmbMaterial.TabIndex = 16;
             // 
             // lblPattern
             // 
@@ -229,11 +229,11 @@
             // 
             // txtPattern
             // 
-            this.txtPattern.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.txtPattern.Location = new System.Drawing.Point(186, 355);
-            this.txtPattern.Name = "txtPattern";
-            this.txtPattern.Size = new System.Drawing.Size(241, 23);
-            this.txtPattern.TabIndex = 18;
+            this.cmbPattern.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.cmbPattern.Location = new System.Drawing.Point(186, 355);
+            this.cmbPattern.Name = "cmbPattern";
+            this.cmbPattern.Size = new System.Drawing.Size(241, 23);
+            this.cmbPattern.TabIndex = 18;
             // 
             // lblColor
             // 
@@ -247,11 +247,11 @@
             // 
             // txtColor
             // 
-            this.txtColor.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.txtColor.Location = new System.Drawing.Point(186, 389);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(241, 23);
-            this.txtColor.TabIndex = 20;
+            this.cmbColor.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.cmbColor.Location = new System.Drawing.Point(186, 389);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(241, 23);
+            this.cmbColor.TabIndex = 20;
             // 
             // lblPrice
             // 
@@ -351,17 +351,17 @@
             this.Controls.Add(this.lblStockQuantity);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.cmbColor);
             this.Controls.Add(this.lblColor);
-            this.Controls.Add(this.txtPattern);
+            this.Controls.Add(this.cmbPattern);
             this.Controls.Add(this.lblPattern);
-            this.Controls.Add(this.txtMaterial);
+            this.Controls.Add(this.cmbMaterial);
             this.Controls.Add(this.lblMaterial);
             this.Controls.Add(this.txtLength);
             this.Controls.Add(this.lblLength);
             this.Controls.Add(this.txtWidth);
             this.Controls.Add(this.lblWidth);
-            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.cmbCountry);
             this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.txtManufacturer);
             this.Controls.Add(this.lblManufacturer);
@@ -402,17 +402,17 @@
         private System.Windows.Forms.Label lblManufacturer;
         private System.Windows.Forms.TextBox txtManufacturer;
         private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.ComboBox cmbCountry;
         private System.Windows.Forms.Label lblWidth;
         private System.Windows.Forms.TextBox txtWidth;
         private System.Windows.Forms.Label lblLength;
         private System.Windows.Forms.TextBox txtLength;
         private System.Windows.Forms.Label lblMaterial;
-        private System.Windows.Forms.TextBox txtMaterial;
+        private System.Windows.Forms.ComboBox cmbMaterial;
         private System.Windows.Forms.Label lblPattern;
-        private System.Windows.Forms.TextBox txtPattern;
+        private System.Windows.Forms.ComboBox cmbPattern;
         private System.Windows.Forms.Label lblColor;
-        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblStockQuantity;

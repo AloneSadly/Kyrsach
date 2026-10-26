@@ -49,66 +49,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountingForm.cs">
+    <Compile Include="Forms\AccountingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountingForm.Designer.cs">
+    <Compile Include="Forms\AccountingForm.Designer.cs">
       <DependentUpon>AccountingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOrderForm.cs">
+    <Compile Include="Forms\AddOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOrderForm.Designer.cs">
+    <Compile Include="Forms\AddOrderForm.Designer.cs">
       <DependentUpon>AddOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthForm.cs">
+    <Compile Include="Forms\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthForm.Designer.cs">
+    <Compile Include="Forms\AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllOrdersForm.cs">
+    <Compile Include="Forms\AllOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllOrdersForm.Designer.cs">
+    <Compile Include="Forms\AllOrdersForm.Designer.cs">
       <DependentUpon>AllOrdersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CaptchaGenerator.cs" />
-    <Compile Include="DbManager.cs" />
-    <Compile Include="FormProductsEdit.cs">
+    <Compile Include="Scripts\CaptchaGenerator.cs" />
+    <Compile Include="Scripts\DbManager.cs" />
+    <Compile Include="Forms\FormProductsEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductsEdit.Designer.cs">
+    <Compile Include="Forms\FormProductsEdit.Designer.cs">
       <DependentUpon>FormProductsEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsersAdd.cs">
+    <Compile Include="Forms\FormUsersAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsersAdd.Designer.cs">
+    <Compile Include="Forms\FormUsersAdd.Designer.cs">
       <DependentUpon>FormUsersAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsersEdit.cs">
+    <Compile Include="Forms\FormUsersEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsersEdit.Designer.cs">
+    <Compile Include="Forms\FormUsersEdit.Designer.cs">
       <DependentUpon>FormUsersEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order_create.cs">
+    <Compile Include="Forms\Order_create.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order_create.Designer.cs">
+    <Compile Include="Forms\Order_create.Designer.cs">
       <DependentUpon>Order_create.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReferenceForm.cs">
+    <Compile Include="Forms\ReferenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReferenceForm.Designer.cs">
+    <Compile Include="Forms\ReferenceForm.Designer.cs">
       <DependentUpon>ReferenceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeMerchForm.cs">
+    <Compile Include="Scripts\FormatHelper.cs" />
+    <Compile Include="Forms\WelcomeMerchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeMerchForm.Designer.cs">
+    <Compile Include="Forms\WelcomeMerchForm.Designer.cs">
       <DependentUpon>WelcomeMerchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -118,65 +119,65 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UsersForm.cs">
+    <Compile Include="Forms\UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersForm.Designer.cs">
+    <Compile Include="Forms\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeAdmForm.cs">
+    <Compile Include="Forms\WelcomeAdmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeAdmForm.Designer.cs">
+    <Compile Include="Forms\WelcomeAdmForm.Designer.cs">
       <DependentUpon>WelcomeAdmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeUserForm.cs">
+    <Compile Include="Forms\WelcomeUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeUserForm.Designer.cs">
+    <Compile Include="Forms\WelcomeUserForm.Designer.cs">
       <DependentUpon>WelcomeUserForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountingForm.resx">
+    <EmbeddedResource Include="Forms\AccountingForm.resx">
       <DependentUpon>AccountingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddOrderForm.resx">
+    <EmbeddedResource Include="Forms\AddOrderForm.resx">
       <DependentUpon>AddOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthForm.resx">
+    <EmbeddedResource Include="Forms\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllOrdersForm.resx">
+    <EmbeddedResource Include="Forms\AllOrdersForm.resx">
       <DependentUpon>AllOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductsEdit.resx">
+    <EmbeddedResource Include="Forms\FormProductsEdit.resx">
       <DependentUpon>FormProductsEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsersAdd.resx">
+    <EmbeddedResource Include="Forms\FormUsersAdd.resx">
       <DependentUpon>FormUsersAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsersEdit.resx">
+    <EmbeddedResource Include="Forms\FormUsersEdit.resx">
       <DependentUpon>FormUsersEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order_create.resx">
+    <EmbeddedResource Include="Forms\Order_create.resx">
       <DependentUpon>Order_create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReferenceForm.resx">
+    <EmbeddedResource Include="Forms\ReferenceForm.resx">
       <DependentUpon>ReferenceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeMerchForm.resx">
+    <EmbeddedResource Include="Forms\WelcomeMerchForm.resx">
       <DependentUpon>WelcomeMerchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersForm.resx">
+    <EmbeddedResource Include="Forms\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeAdmForm.resx">
+    <EmbeddedResource Include="Forms\WelcomeAdmForm.resx">
       <DependentUpon>WelcomeAdmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeUserForm.resx">
+    <EmbeddedResource Include="Forms\WelcomeUserForm.resx">
       <DependentUpon>WelcomeUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

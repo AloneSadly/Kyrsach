@@ -14,6 +14,7 @@ namespace KyrsachGR
     {
         private CaptchaGenerator captchaGenerator = new CaptchaGenerator();
         private int failedAttempts = 0;
+        private bool isPasswordVisible = false;
 
         // ============================================================
         // ХАРДКОД-ПОЛЬЗОВАТЕЛИ (для тестирования без БД)
@@ -36,6 +37,8 @@ namespace KyrsachGR
         {
             try
             {
+                txtPassword.PasswordChar = '*';
+
                 // 1. Добавляем тестовых пользователей в ComboBox
                 comboBoxLogin.Items.Clear();
                 comboBoxLogin.Items.AddRange(new object[] { "admin", "manager", "user" });
@@ -96,7 +99,7 @@ namespace KyrsachGR
                 if (testUser.Password == password)
                 {
                     // Успех через хардкод
-                    OpenFormByRole(testUser.Role);
+                    OpenFormByRole(testUser.Role, login);
                     return;
                 }
                 else
@@ -116,7 +119,7 @@ namespace KyrsachGR
 
                 if (role != null)
                 {
-                    OpenFormByRole(role);
+                    OpenFormByRole(role, login);
                 }
                 else
                 {
@@ -134,21 +137,21 @@ namespace KyrsachGR
             }
         }
 
-        private void OpenFormByRole(string role)
+        private void OpenFormByRole(string role, string login) // Добавили параметр login
         {
             Form nextForm = null;
 
             switch (role.ToLower())
             {
                 case "admin":
-                    nextForm = new WelcomeAdmForm();
+                    nextForm = new WelcomeAdmForm(login); // Передаем логин
                     break;
                 case "manager":
-                    nextForm = new WelcomeMerchForm();
+                    nextForm = new WelcomeMerchForm(login); // Передаем логин
                     break;
                 case "seller":
-                case "user": // На случай, если в БД роль называется "user"
-                    nextForm = new WelcomeUserForm();
+                case "user":
+                    nextForm = new WelcomeUserForm(login); // Передаем логин
                     break;
                 default:
                     MessageBox.Show($"Неизвестная роль: {role}. Обратитесь к администратору.");
@@ -228,6 +231,21 @@ namespace KyrsachGR
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void btnTogglePass_Click(object sender, EventArgs e)
+        {
+            isPasswordVisible = !isPasswordVisible;
+
+            if (isPasswordVisible)
+            {
+                txtPassword.PasswordChar = '\0';
+                btnTogglePass.Text = "🙈"; // Закрытый глаз
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                btnTogglePass.Text = "👁"; // Открытый глаз
+            }
         }
     }
 }

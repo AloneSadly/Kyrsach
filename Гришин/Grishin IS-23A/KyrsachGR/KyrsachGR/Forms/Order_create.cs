@@ -6,10 +6,8 @@ namespace KyrsachGR
 {
     public partial class Order_create : Form
     {
-        // Таблица, которая будет выступать в роли "корзины"
         private DataTable cartTable;
-        // ID текущего авторизованного пользователя (для seller_id)
-        private int currentSellerId = 3; // По умолчанию (Сидоров). В реальном проекте передавайте ID из AuthForm.
+        private int currentSellerId = 3; // Заглушка, в идеале передавать ID продавца
 
         public Order_create()
         {
@@ -27,15 +25,23 @@ namespace KyrsachGR
             cartTable.Columns.Add("Сумма", typeof(decimal));
             dgvItems.DataSource = cartTable;
 
-            // Настройка ComboBox
-            cmbCategoryFilter.Items.Add("Все");
-            cmbCategoryFilter.Items.Add("Одежда"); // В идеале заполнять из БД
-            cmbCategoryFilter.SelectedIndex = 0;
+            // Заполнение ComboBox "Категория" из БД
+            try
+            {
+                DataTable categories = DbManager.GetCategories();
+                cmbCategoryFilter.DataSource = categories;
+                cmbCategoryFilter.DisplayMember = "name";
+                cmbCategoryFilter.ValueMember = "categ_id";
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка загрузки категорий: " + ex.Message); }
 
-            cmbSortBy.Items.AddRange(new string[] { "По имени", "По цене" });
+            // Заполнение ComboBox "Сортировка"
+            cmbSortBy.Items.Clear();
+            cmbSortBy.Items.AddRange(new string[] { "Без сортировки", "По цене (возр.)", "По цене (убыв.)" });
             cmbSortBy.SelectedIndex = 0;
-            cmbSortOrder.Items.AddRange(new string[] { "По возрастанию", "По убыванию" });
-            cmbSortOrder.SelectedIndex = 0;
+
+            // Счетчик количества (вместо DomainUpDown лучше NumericUpDown, но оставим ваш)
+            domainUpDown1.Text = "1";
 
             LoadProducts();
         }
@@ -45,19 +51,43 @@ namespace KyrsachGR
             try
             {
                 string search = txtSearch.Text.Trim();
-                // Загружаем товары (используем метод из DbManager, который мы писали ранее)
-                // Передаем пустую строку вместо статуса, чтобы показать все товары
-                DataTable dt = DbManager.GetProducts(1, 100, search, "Все", cmbSortBy.Text);
+                string sort = cmbSortBy.SelectedItem?.ToString() ?? "Без сортировки";
+
+                // Получаем ID категории (если выбрано "Все", то 0)
+                int catId = 0;
+                if (cmbCategoryFilter.SelectedValue != null && cmbCategoryFilter.SelectedValue is int)
+                {
+                    catId = (int)cmbCategoryFilter.SelectedValue;
+                }
+
+                DataTable dt = DbManager.GetProducts(1, 1000, search, "Все", sort, catId);
                 dgvProducts.DataSource = dt;
 
+                // Скрываем технические колонки
                 if (dgvProducts.Columns["id"] != null) dgvProducts.Columns["id"].Visible = false;
+                if (dgvProducts.Columns["color"] != null) dgvProducts.Columns["color"].Visible = false;
+                if (dgvProducts.Columns["country"] != null) dgvProducts.Columns["country"].Visible = false;
+                if (dgvProducts.Columns["category"] != null) dgvProducts.Columns["category"].Visible = false;
+
+                if (dgvProducts.Columns["name"] != null) dgvProducts.Columns["name"].HeaderText = "Название";
+                if (dgvProducts.Columns["article"] != null) dgvProducts.Columns["article"].HeaderText = "Артикул";
+                if (dgvProducts.Columns["price"] != null) dgvProducts.Columns["price"].HeaderText = "Цена";
+                if (dgvProducts.Columns["stock_quantity"] != null) dgvProducts.Columns["stock_quantity"].HeaderText = "Остаток";
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        // Поиск
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        // Поиск и фильтры
+        private void txtSearch_TextChanged(object sender, EventArgs e) { LoadProducts(); }
+        private void cmbCategoryFilter_SelectedIndexChanged(object sender, EventArgs e) { LoadProducts(); }
+        private void cmbSortBy_SelectedIndexChanged(object sender, EventArgs e) { LoadProducts(); }
+
+        // Кнопка "Сброс"
+        private void btnResetFilter_Click(object sender, EventArgs e)
         {
+            txtSearch.Text = "";
+            cmbCategoryFilter.SelectedIndex = 0;
+            cmbSortBy.SelectedIndex = 0;
             LoadProducts();
         }
 
@@ -70,16 +100,16 @@ namespace KyrsachGR
                 return;
             }
 
-            // Получаем данные выбранного товара
             DataGridViewRow row = dgvProducts.SelectedRows[0];
             int prodId = Convert.ToInt32(row.Cells["id"].Value);
             string prodName = row.Cells["name"].Value.ToString();
             decimal price = Convert.ToDecimal(row.Cells["price"].Value);
-            int qtyToAdd = Convert.ToInt32(domainUpDown1.Text); 
 
-            if (qtyToAdd <= 0)
+            // Читаем количество (исправленный баг)
+            int qtyToAdd = 1;
+            if (!int.TryParse(domainUpDown1.Text, out qtyToAdd) || qtyToAdd <= 0)
             {
-                MessageBox.Show("Укажите количество больше нуля!");
+                MessageBox.Show("Укажите корректное количество больше нуля!");
                 return;
             }
 
@@ -96,31 +126,28 @@ namespace KyrsachGR
 
             if (existingRow != null)
             {
-                // Если есть, увеличиваем количество
                 existingRow["quantity"] = Convert.ToInt32(existingRow["quantity"]) + qtyToAdd;
                 existingRow["Сумма"] = Convert.ToDecimal(existingRow["quantity"]) * price;
             }
             else
             {
-                // Если нет, добавляем новую строку
                 cartTable.Rows.Add(prodId, prodName, qtyToAdd, price, qtyToAdd * price);
             }
 
             UpdateTotals();
-            Convert.ToInt32(domainUpDown1.Text = "0"); // Сбрасываем счетчик
+            domainUpDown1.Text = "1"; // Сбрасываем счетчик
         }
 
         // Удаление из корзины
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
             if (dgvItems.SelectedRows.Count == 0) return;
-
             int index = dgvItems.SelectedRows[0].Index;
             cartTable.Rows.RemoveAt(index);
             UpdateTotals();
         }
 
-        // Пересчет итогов
+        // Пересчет итогов и скидок
         private void UpdateTotals()
         {
             decimal subtotal = 0;
@@ -129,8 +156,12 @@ namespace KyrsachGR
                 subtotal += Convert.ToDecimal(row["Сумма"]);
             }
 
-            // Скидка 10% если сумма > 15000
-            decimal discountPercent = subtotal > 15000 ? 10 : 0;
+            // Логика скидки по заданию
+            decimal discountPercent = 0;
+            if (subtotal >= 70000) discountPercent = 15;
+            else if (subtotal >= 50000) discountPercent = 10;
+            else if (subtotal >= 30000) discountPercent = 5;
+
             decimal discountSum = subtotal * (discountPercent / 100);
             decimal total = subtotal - discountSum;
 
@@ -150,15 +181,16 @@ namespace KyrsachGR
             }
             if (string.IsNullOrWhiteSpace(txtCustomerName.Text))
             {
-                MessageBox.Show("Введите имя покупателя!");
+                MessageBox.Show("Введите ФИО покупателя!");
                 return;
             }
 
             try
             {
-                decimal totalAmount = Convert.ToDecimal(lblTotalAmount.Text.Split(' ')[0]);
+                // Извлекаем итоговую сумму из Label (убираем текст " руб.")
+                string totalStr = lblTotalAmount.Text.Replace(" руб.", "").Trim();
+                decimal totalAmount = Convert.ToDecimal(totalStr);
 
-                // Вызываем метод сохранения в БД
                 int receiptId = DbManager.CreateReceipt(
                     DateTime.Now,
                     totalAmount,
